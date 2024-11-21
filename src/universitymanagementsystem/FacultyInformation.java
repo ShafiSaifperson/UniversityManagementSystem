@@ -33,24 +33,20 @@ public class FacultyInformation {
        
    }
 
-    public FacultyInformation(String name, String department, String uguni, String ugSubject, double ugCGPA, String Muni, String MSubject, double MCGPA, String PHDUNI, String PHDresearchArea, String Address, String emailAddress, String Office, String[] CourseCode, String[] CourseName, String OfficeHours) {
+    public FacultyInformation(String name, String department, String uguni, String ugSubject, String Muni, String MSubject, String PHDUNI, String PHDresearchArea, String Address, String emailAddress) {
         this.name = name;
         this.department = department;
         this.uguni = uguni;
         this.ugSubject = ugSubject;
-        this.ugCGPA = ugCGPA;
         this.Muni = Muni;
         this.MSubject = MSubject;
-        this.MCGPA = MCGPA;
         this.PHDUNI = PHDUNI;
         this.PHDresearchArea = PHDresearchArea;
         this.Address = Address;
         this.emailAddress = emailAddress;
-        this.Office = Office;
-        this.CourseCode = CourseCode;
-        this.CourseName = CourseName;
-        this.OfficeHours = OfficeHours;
     }
+
+   
 
     public String getName() {
         return name;

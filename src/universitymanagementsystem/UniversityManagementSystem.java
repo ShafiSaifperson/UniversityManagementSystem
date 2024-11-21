@@ -30,7 +30,8 @@ public class UniversityManagementSystem {
             
             }
              Student student = new Student();
-            AddingPeople(student);
+            //AddingPeople(student);
+            AddingFaculty();
             
     }
     public static void AddingPeople(Student student){
@@ -60,7 +61,7 @@ public class UniversityManagementSystem {
         s.close();
         
     }
-    public static void AddingPeople(FacultyInformation faculty){
+    public static void AddingFaculty(){
         Scanner s = new Scanner(System.in);
         System.out.println("Enter Name:");
         String name = s.nextLine();
@@ -70,10 +71,21 @@ public class UniversityManagementSystem {
         String department = s.nextLine();
         System.out.println("Enter Email Address:");
         String email = s.nextLine();
-        faculty.setName(name);
-        faculty.setDepartment(department);
-        faculty.setAddress(address);
-        faculty.setEmailAddress(email);
+        System.out.println("Enter Name of the Undergraduate University:");
+        String uUni = s.nextLine();
+        System.out.println("Enter Subject of Undergraduate degree:");
+        String uSub = s.nextLine();
+        System.out.println("Enter name of Master's University:");
+        String mUni = s.nextLine();
+        System.out.println("Enter subject of Master's:");
+        String mSub = s.nextLine();
+        System.out.println("Enter name of pHD University: ");
+        String pHDUni = s.nextLine();
+        System.out.println("Enter Research Area:");
+        String researchArea = s.nextLine();
+        FacultyInformation faculty = new FacultyInformation(name, department, uUni, uSub, mUni, mSub, pHDUni, researchArea, address, email);
+        System.out.println(faculty.toString());
+        
     }
     
 }
