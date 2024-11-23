@@ -29,22 +29,18 @@ public class Student {
         StudentID++;
     }
 
-    public Student(String name, String department, String Address, String emailAddress, String MotherName, String FatherName, String[] CourseCode, String[] CourseName, String[] currentCourses, String[] CompletedCourses, int mobile, int StudentID, int totalCredits, int completedCredits) {
+    public Student(String name, String department, String Address, String emailAddress, String MotherName, String FatherName, int mobile) {
         this.name = name;
         this.department = department;
         this.Address = Address;
         this.emailAddress = emailAddress;
         this.MotherName = MotherName;
         this.FatherName = FatherName;
-        this.CourseCode = CourseCode;
-        this.CourseName = CourseName;
-        this.currentCourses = currentCourses;
-        this.CompletedCourses = CompletedCourses;
         this.mobile = mobile;
-        this.StudentID = StudentID;
-        this.totalCredits = totalCredits;
-        this.completedCredits = completedCredits;
+        StudentID++;
     }
+
+  
 
     @Override
     public String toString() {

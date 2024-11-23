@@ -5,12 +5,13 @@
 package universitymanagementsystem;
 
 import java.util.*;
+import java.util.ArrayList;
+import java.util.Iterator;
+import java.util.List;
 public class UniversityManagementSystem {
 
-    /**
-     * @param args the command line arguments
-     */
     public static void main(String[] args) {
+        UniversityManagementSystemMethods methods = new UniversityManagementSystemMethods();
         LoginSystem Admin = new LoginSystem("Kuddus", "1234");
         Scanner scanner = new Scanner(System.in);
         
@@ -29,12 +30,19 @@ public class UniversityManagementSystem {
             }
             
             }
-             Student student = new Student();
-            //AddingPeople(student);
+            
+            System.out.println("You can do the following"+"\n"+"1. Add a new Student"+"\n"+"2. Add a new Faculty");
+            int choice = scanner.nextInt();
+            if(choice == 1){
+            methods.addStudent(AddingStudents());
+            }
+            else if(choice == 2){
             AddingFaculty();
+            methods.addFaculty(AddingFaculty());
+            }
             
     }
-    public static void AddingPeople(Student student){
+    public static Student AddingStudents(){
       Scanner s = new Scanner(System.in);
       System.out.println("Enter Name:");
         String name = s.nextLine();
@@ -50,18 +58,13 @@ public class UniversityManagementSystem {
         String Fathername = s.nextLine();
         System.out.println("Enter Mobile Number:");
         int mobile = s.nextInt();
-        student.setName(name);
-        student.setAddress(address);
-        student.setEmailAddress(email);
-        student.setMotherName(Mothername);
-        student.setFatherName(Fathername);
-        student.setMobile(mobile);
-        student.setDepartment(department);
+        Student student = new Student(name, department, address,  email,  Mothername,  Fathername, mobile);
         System.out.println(student.toString());
         s.close();
+        return student;
         
     }
-    public static void AddingFaculty(){
+    public static FacultyInformation AddingFaculty(){
         Scanner s = new Scanner(System.in);
         System.out.println("Enter Name:");
         String name = s.nextLine();
@@ -75,17 +78,22 @@ public class UniversityManagementSystem {
         String uUni = s.nextLine();
         System.out.println("Enter Subject of Undergraduate degree:");
         String uSub = s.nextLine();
+        System.out.println("Enter undergraduate cgpa: ");
+        double ugcgpa = s.nextDouble();
         System.out.println("Enter name of Master's University:");
         String mUni = s.nextLine();
         System.out.println("Enter subject of Master's:");
         String mSub = s.nextLine();
+        System.out.println("Enter Masters cgpa: ");
+        double Mcgpa = s.nextDouble();
         System.out.println("Enter name of pHD University: ");
         String pHDUni = s.nextLine();
         System.out.println("Enter Research Area:");
         String researchArea = s.nextLine();
-        FacultyInformation faculty = new FacultyInformation(name, department, uUni, uSub, mUni, mSub, pHDUni, researchArea, address, email);
+        System.out.println("Enter undergraduate cgpa: ");
+        FacultyInformation faculty = new FacultyInformation(ugcgpa,Mcgpa,name, department, uUni, uSub, mUni, mSub, pHDUni, researchArea, address, email);
         System.out.println(faculty.toString());
-        
+        return faculty;
     }
     
 }
@@ -117,3 +125,5 @@ class LoginSystem {
     
     
 }
+
+

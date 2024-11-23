@@ -11,7 +11,7 @@ package universitymanagementsystem;
  */
 public class FacultyInformation {
     private String name;
-    private int faultyID = 1234;
+    private int facultyID = 1234;
     private String department;
     private String uguni;
     private String ugSubject;
@@ -30,10 +30,10 @@ public class FacultyInformation {
     
     
    FacultyInformation(){
-       
+       facultyID++;
    }
 
-    public FacultyInformation(String name, String department, String uguni, String ugSubject, String Muni, String MSubject, String PHDUNI, String PHDresearchArea, String Address, String emailAddress) {
+    public FacultyInformation(double ugCGPA, double MCGPA, String name, String department, String uguni, String ugSubject, String Muni, String MSubject, String PHDUNI, String PHDresearchArea, String Address, String emailAddress) {
         this.name = name;
         this.department = department;
         this.uguni = uguni;
@@ -44,6 +44,9 @@ public class FacultyInformation {
         this.PHDresearchArea = PHDresearchArea;
         this.Address = Address;
         this.emailAddress = emailAddress;
+        this.MCGPA = MCGPA;
+        this.ugCGPA = ugCGPA;
+        facultyID++;
     }
 
    
@@ -52,8 +55,8 @@ public class FacultyInformation {
         return name;
     }
 
-    public int getFaultyID() {
-        return faultyID;
+    public int getFacultyID() {
+        return facultyID;
     }
 
     public String getDepartment() {
@@ -120,8 +123,8 @@ public class FacultyInformation {
         this.name = name;
     }
 
-    public void setFaultyID(int faultyID) {
-        this.faultyID = faultyID;
+    public void setFcaultyID(int faultyID) {
+        this.facultyID = faultyID;
     }
 
     public void setDepartment(String department) {
@@ -186,7 +189,7 @@ public class FacultyInformation {
 
     @Override
     public String toString() {
-        return "FacultyInformation{" + "name=" + name + ", faultyID=" + faultyID + ", department=" + department + ", uguni=" + uguni + ", ugSubject=" + ugSubject + ", ugCGPA=" + ugCGPA + ", Muni=" + Muni + ", MSubject=" + MSubject + ", MCGPA=" + MCGPA + ", PHDUNI=" + PHDUNI + ", PHDresearchArea=" + PHDresearchArea + ", Address=" + Address + ", emailAddress=" + emailAddress + ", Office=" + Office + ", CourseCode=" + CourseCode + ", CourseName=" + CourseName + ", OfficeHours=" + OfficeHours + '}';
+        return "FacultyInformation{" + "name=" + name + ", faultyID=" + facultyID + ", department=" + department + ", uguni=" + uguni + ", ugSubject=" + ugSubject + ", ugCGPA=" + ugCGPA + ", Muni=" + Muni + ", MSubject=" + MSubject + ", MCGPA=" + MCGPA + ", PHDUNI=" + PHDUNI + ", PHDresearchArea=" + PHDresearchArea + ", Address=" + Address + ", emailAddress=" + emailAddress + ", Office=" + Office + ", CourseCode=" + CourseCode + ", CourseName=" + CourseName + ", OfficeHours=" + OfficeHours + '}';
     }
             
 }
