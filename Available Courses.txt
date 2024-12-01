@@ -1,0 +1,27 @@
+School of Business and Economics:
+BUS101
+FIN301
+ACC201
+MKT202
+HRM302
+
+School of Engineering and Physical Sciences:
+CSE115
+EEE141
+MAT120
+PHY107
+CSE215
+
+School of Humanities and Social Sciences:
+ENG102
+HIS101
+SOC201
+PHI101
+PSY101
+
+School of Health and Life Sciences:
+BIO101
+BIO102
+CHE101
+ENV203
+PHAR301

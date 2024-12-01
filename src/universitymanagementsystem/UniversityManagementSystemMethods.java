@@ -71,10 +71,10 @@ public class UniversityManagementSystemMethods {
     }
     public void displayFaculty() {
         if (facultyList.isEmpty()) {
-            System.out.println("No students in the system.");
+            System.out.println("No faculty in the system.");
             return;
         }
-        System.out.println("Current Students:");
+        System.out.println("Current faculties:");
         for (FacultyInformation faculty : facultyList) {
             System.out.println(faculty );
         }

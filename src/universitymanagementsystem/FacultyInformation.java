@@ -12,6 +12,7 @@ package universitymanagementsystem;
 public class FacultyInformation {
     private String name;
     private int facultyID = 1234;
+    private int numberOfCourses;
     private String department;
     private String uguni;
     private String ugSubject;
